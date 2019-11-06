@@ -1,0 +1,11 @@
+<div class="container mt-5 pr-5 pl-5 pb-5 rounded">
+    <h1 class="text-center">Todo App</h1>
+    <input type="text" class="form-control" id="newItem">
+    <button id="addButton" (click)="addItem()">+</button>
+    <div class="m-auto" *ngFor="let item of arrayOfItems; let i=index">
+        <span class="card mt-2 mb-2">
+            <span class="item text-left">{{item}}</span>
+            <button class="btn float-right deletebutton" (click)="deleteItem(i)"><i class="fas fa-trash"></i></button>
+        </span>
+    </div>
+</div>
